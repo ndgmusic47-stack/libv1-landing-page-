@@ -1,0 +1,349 @@
+/* =========================================
+
+   NP22 OFFICIAL BRAND SYSTEM (STATIC SITE)
+
+   Colors:
+
+   - Indigo: #4B0082
+
+   - Gold:   #FFB800
+
+   - Off-White: #F4F4F4
+
+   ========================================= */
+
+
+
+:root {
+
+    --indigo: #4B0082;
+
+    --indigo-deep: #2b0050;
+
+    --gold: #FFB800;
+
+    --gold-dark: #e6a400;
+
+    --offwhite: #F4F4F4;
+
+    --dark: #0A0A0A;
+
+    --soft-dark: #141414;
+
+}
+
+
+
+/* Global Reset */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+
+body {
+
+    background: var(--dark);
+
+    color: var(--offwhite);
+
+    font-family: "Poppins", Arial, sans-serif;
+
+    line-height: 1.7;
+
+}
+
+
+
+/* =======================
+
+   HERO SECTION
+
+   ======================= */
+
+
+
+.hero {
+
+    background: radial-gradient(circle at center, var(--indigo) 0%, var(--indigo-deep) 100%);
+
+    padding: 130px 20px;
+
+    text-align: center;
+
+}
+
+
+
+.hero h1 {
+
+    color: var(--gold);
+
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+
+    line-height: 1.2;
+
+}
+
+
+
+.subtitle {
+
+    font-size: 1.2rem;
+
+    opacity: 0.9;
+
+    max-width: 720px;
+
+    margin: 0 auto 30px;
+
+}
+
+
+
+/* CTA Button */
+
+.cta-btn {
+
+    background: var(--gold);
+
+    color: var(--dark);
+
+    padding: 15px 34px;
+
+    border-radius: 10px;
+
+    font-size: 1.1rem;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    display: inline-block;
+
+    transition: 0.25s;
+
+}
+
+
+
+.cta-btn:hover {
+
+    background: var(--gold-dark);
+
+}
+
+
+
+.cta-btn.big {
+
+    padding: 18px 50px;
+
+    font-size: 1.2rem;
+
+}
+
+
+
+.risk-note {
+
+    margin-top: 12px;
+
+    font-size: 0.9rem;
+
+    opacity: 0.75;
+
+}
+
+
+
+/* =======================
+
+   SECTION WRAPPER
+
+   ======================= */
+
+
+
+section {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 80px 20px;
+
+}
+
+
+
+/* HEADINGS */
+
+
+
+h2 {
+
+    font-size: clamp(1.9rem, 4vw, 2.4rem);
+
+    color: var(--gold);
+
+    margin-bottom: 18px;
+
+    font-weight: 600;
+
+}
+
+
+
+p {
+
+    opacity: 0.9;
+
+    margin-bottom: 18px;
+
+}
+
+
+
+.bold {
+
+    font-weight: 700;
+
+    color: var(--offwhite);
+
+}
+
+
+
+/* =======================
+
+   BENEFIT LISTS
+
+   ======================= */
+
+
+
+.benefits {
+
+    list-style: none;
+
+    margin-top: 25px;
+
+}
+
+
+
+.benefits li {
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+    font-size: 1.05rem;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+
+.benefits.clean li {
+
+    border-bottom: none;
+
+}
+
+
+
+/* =======================
+
+   SOCIAL PROOF
+
+   ======================= */
+
+
+
+.social-proof blockquote {
+
+    background: rgba(255,255,255,0.05);
+
+    padding: 25px;
+
+    border-left: 5px solid var(--gold);
+
+    margin: 25px 0;
+
+    font-style: italic;
+
+    font-size: 1.2rem;
+
+    color: var(--offwhite);
+
+}
+
+
+
+/* =======================
+
+   CTA SECTION
+
+   ======================= */
+
+
+
+.call-to-action {
+
+    background: linear-gradient(160deg, var(--indigo-deep), var(--indigo));
+
+    text-align: center;
+
+    padding: 110px 20px;
+
+}
+
+
+
+.call-to-action p {
+
+    font-size: 1.15rem;
+
+    max-width: 700px;
+
+    margin: 0 auto 30px;
+
+}
+
+
+
+/* =======================
+
+   FOOTER
+
+   ======================= */
+
+
+
+footer {
+
+    text-align: center;
+
+    padding: 45px 20px;
+
+    opacity: 0.6;
+
+    font-size: 0.9rem;
+
+}
