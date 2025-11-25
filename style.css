@@ -1,48 +1,30 @@
-/* =========================================
+/* ===========================================================
 
-   NP22 OFFICIAL BRAND SYSTEM (STATIC SITE)
+   PREMIUM SaaS STYLE — CLEAN REBUILD (Patch V9)
 
-   Colors:
+   This file replaces ALL previous CSS. Do not merge with old styles.
 
-   - Indigo: #4B0082
-
-   - Gold:   #FFB800
-
-   - Off-White: #F4F4F4
-
-   ========================================= */
+   =========================================================== */
 
 
 
-:root {
-
-    --indigo: #4B0082;
-
-    --indigo-deep: #2b0050;
-
-    --gold: #FFB800;
-
-    --gold-dark: #e6a400;
-
-    --offwhite: #F4F4F4;
-
-    --dark: #0A0A0A;
-
-    --soft-dark: #141414;
-
-}
 
 
+/* -------------------------------
 
-/* Global Reset */
+    GLOBAL RESET + TYPOGRAPHY
+
+---------------------------------*/
+
+
 
 * {
 
-    margin: 0;
+  margin: 0;
 
-    padding: 0;
+  padding: 0;
 
-    box-sizing: border-box;
+  box-sizing: border-box;
 
 }
 
@@ -50,184 +32,35 @@
 
 body {
 
-    background: linear-gradient(135deg, #4B0082 0%, #2E0055 100%);
+  background: #0b0812;
 
-    color: #F4F4F4;
+  color: #ffffff;
 
-    min-height: 100vh;
+  font-family: 'Inter', sans-serif;
 
-    margin: 0;
+  font-weight: 400;
 
-    padding-top: 56px;
+  line-height: 1.5;
 
-    font-family: 'Poppins', sans-serif;
-
-    line-height: 1.7;
+  padding-top: 56px; /* space for FOMO bar */
 
 }
 
 
 
-/* =======================
+h1, h2, h3 {
 
-   HERO SECTION
-
-   ======================= */
-
-
-
-.hero {
-
-    background: transparent;
-
-    padding: 130px 20px;
-
-    text-align: center;
-
-    position: relative;
-
-    overflow: hidden;
+  font-weight: 700;
 
 }
-
-
-
-.hero h1 {
-
-    color: var(--gold);
-
-    font-size: clamp(2.4rem, 5vw, 3.6rem);
-
-    font-weight: 700;
-
-    margin-bottom: 20px;
-
-    letter-spacing: 0.4px;
-
-    line-height: 1.15;
-
-}
-
-.hero-title {
-
-    text-shadow: 0 0 8px rgba(255, 184, 0, 0.3);
-
-}
-
-
-
-.subtitle {
-
-    font-size: 1.2rem;
-
-    opacity: 0.9;
-
-    max-width: 720px;
-
-    margin: 0 auto 30px;
-
-}
-
-
-
-/* CTA Button */
-
-.cta-btn {
-
-    background: var(--gold);
-
-    color: var(--dark);
-
-    padding: 15px 34px;
-
-    border-radius: 10px;
-
-    font-size: 1.1rem;
-
-    font-weight: 700;
-
-    text-decoration: none;
-
-    display: inline-block;
-
-    transition: 0.25s;
-
-}
-
-
-
-.cta-btn:hover {
-
-    background: var(--gold-dark);
-
-}
-
-
-
-.cta-btn.big {
-
-    padding: 18px 50px;
-
-    font-size: 1.2rem;
-
-}
-
-
-
-.risk-note {
-
-    margin-top: 12px;
-
-    font-size: 0.9rem;
-
-    opacity: 0.75;
-
-}
-
-
-
-/* =======================
-
-   SECTION WRAPPER
-
-   ======================= */
-
-
-
-section {
-
-    max-width: 900px;
-
-    margin: 0 auto;
-
-    padding: 80px 20px;
-
-}
-
-h1 {
-    letter-spacing: 0.4px;
-    line-height: 1.15;
-}
-
-.section {
-    padding-top: 8px;
-}
-
-
-
-/* HEADINGS */
 
 
 
 h2 {
 
-    font-size: clamp(1.9rem, 4vw, 2.4rem);
+  font-size: 2rem;
 
-    color: var(--gold);
-
-    margin-bottom: 18px;
-
-    font-weight: 600;
+  margin-bottom: 25px;
 
 }
 
@@ -235,206 +68,598 @@ h2 {
 
 p {
 
-    opacity: 0.9;
+  font-size: 1.15rem;
 
-    margin-bottom: 18px;
+  margin-bottom: 18px;
 
-}
-
-
-
-.bold {
-
-    font-weight: 700;
-
-    color: var(--offwhite);
+  opacity: 0.9;
 
 }
 
 
 
-/* =======================
+section {
 
-   BENEFIT LISTS
+  width: 100%;
 
-   ======================= */
-
-
-
-.benefits {
-
-    list-style: none;
-
-    margin-top: 25px;
+  padding: 100px 0;
 
 }
 
 
 
-.benefits li {
+img {
 
-    padding: 12px 0;
+  max-width: 100%;
 
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-
-    font-size: 1.05rem;
-
-    display: flex;
-
-    align-items: center;
+  display: block;
 
 }
 
 
 
-.benefits.clean li {
-
-    border-bottom: none;
-
-}
 
 
+/* -------------------------------
 
-/* =======================
+    CONTAINERS
 
-   SOCIAL PROOF
-
-   ======================= */
+---------------------------------*/
 
 
 
-.social-proof blockquote {
+.hero-inner,
 
-    background: rgba(255,255,255,0.05);
+.alone-grid,
 
-    padding: 25px;
+.changes-grid,
 
-    border-left: 5px solid var(--gold);
+.full-stack,
 
-    margin: 25px 0;
+.transform-list,
 
-    font-style: italic;
+.artist-desc,
 
-    font-size: 1.2rem;
+.scarcity-desc,
 
-    color: var(--offwhite);
+.testimonials,
 
-}
+.trust-row {
 
+  max-width: 900px;
 
+  margin: 0 auto;
 
-/* =======================
-
-   CTA SECTION
-
-   ======================= */
-
-
-
-.call-to-action {
-
-    background: transparent;
-
-    text-align: center;
-
-    padding: 110px 20px;
+  text-align: center;
 
 }
 
 
 
-.call-to-action p {
 
-    font-size: 1.15rem;
 
-    max-width: 700px;
+/* -------------------------------
 
-    margin: 0 auto 30px;
+    SOFT GRADIENT BACKGROUNDS
+
+    (B1 — Soft Alternating)
+
+---------------------------------*/
+
+
+
+.soft-gradient-1 {
+
+  background:
+
+    radial-gradient(circle at top right, rgba(255,184,0,0.18), transparent 40%),
+
+    radial-gradient(circle at bottom left, rgba(75,0,130,0.32), transparent 42%);
 
 }
 
 
 
-/* =======================
+.soft-gradient-2 {
 
-   FOOTER
+  background:
 
-   ======================= */
+    linear-gradient(180deg, #0d0a17 0%, #100c19 100%);
+
+}
+
+
+
+.soft-gradient-3 {
+
+  background:
+
+    radial-gradient(circle at center, rgba(138,92,255,0.07), transparent 70%),
+
+    linear-gradient(180deg, #0a0711 0%, #0d0a16 100%);
+
+}
+
+
+
+.soft-gradient-4 {
+
+  background:
+
+    linear-gradient(180deg, #100b1e 0%, #0e0a15 100%);
+
+}
+
+
+
+.soft-gradient-5 {
+
+  background:
+
+    radial-gradient(circle at center, rgba(255,184,0,0.1), transparent 65%),
+
+    #0f0a18;
+
+}
+
+
+
+.soft-gradient-6 {
+
+  background:
+
+    linear-gradient(180deg, #0a0711 0%, #0d0a16 100%);
+
+}
+
+
+
+
+
+/* -------------------------------
+
+    HERO SECTION
+
+---------------------------------*/
+
+
+
+.hero {
+
+  padding: 140px 0 90px;
+
+  text-align: center;
+
+}
+
+
+
+.hero h1 {
+
+  font-size: 3.2rem;
+
+  line-height: 1.15;
+
+  margin-bottom: 22px;
+
+}
+
+
+
+.hero-sub {
+
+  font-size: 1.35rem;
+
+  margin-bottom: 30px;
+
+}
+
+
+
+.cta-btn {
+
+  display: inline-block;
+
+  background: #FFB800;
+
+  padding: 16px 38px;
+
+  border-radius: 12px;
+
+  font-size: 1.15rem;
+
+  font-weight: 600;
+
+  color: #120d1c;
+
+  text-decoration: none;
+
+  transition: opacity 0.2s ease;
+
+  margin-top: 10px;
+
+}
+
+
+
+.cta-btn:hover {
+
+  opacity: 0.85;
+
+}
+
+
+
+.cta-btn.large {
+
+  padding: 18px 42px;
+
+  font-size: 1.25rem;
+
+}
+
+
+
+.cta-btn.big {
+
+  padding: 20px 46px;
+
+  border-radius: 14px;
+
+  font-size: 1.35rem;
+
+}
+
+
+
+.hero-visual-wrap {
+
+  position: relative;
+
+  margin-top: 55px;
+
+}
+
+
+
+.ai-sparkle {
+
+  width: 160px;
+
+  position: absolute;
+
+  left: -80px;
+
+  top: 50px;
+
+  opacity: 0.9;
+
+}
+
+
+
+.ai-label {
+
+  position: absolute;
+
+  left: -22px;
+
+  top: 78px;
+
+  font-size: 1.3rem;
+
+  font-weight: 600;
+
+}
+
+
+
+.hero-mockup {
+
+  width: 100%;
+
+  max-width: 780px;
+
+  border-radius: 18px;
+
+  box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+
+}
+
+
+
+
+
+/* -------------------------------
+
+    YOU'RE DOING EVERYTHING ALONE
+
+---------------------------------*/
+
+
+
+.alone h2 {
+
+  margin-bottom: 20px;
+
+}
+
+
+
+.alone-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 40px;
+
+  margin-top: 40px;
+
+}
+
+
+
+.alone-grid img {
+
+  width: 36px;
+
+  margin-bottom: 10px;
+
+}
+
+
+
+.alone p.alone-desc {
+
+  margin-top: 40px;
+
+  max-width: 720px;
+
+  opacity: 0.85;
+
+}
+
+
+
+
+
+/* -------------------------------
+
+    CHANGES EVERYTHING
+
+---------------------------------*/
+
+
+
+.changes-desc {
+
+  max-width: 750px;
+
+  margin: 0 auto 40px auto;
+
+  opacity: 0.85;
+
+}
+
+
+
+.changes-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 40px;
+
+}
+
+
+
+.changes-grid img {
+
+  width: 34px;
+
+  margin-bottom: 12px;
+
+}
+
+
+
+.full-stack {
+
+  margin-top: 45px;
+
+  opacity: 0.85;
+
+}
+
+
+
+.full-stack li {
+
+  margin-bottom: 12px;
+
+}
+
+
+
+
+
+/* -------------------------------
+
+    TRANSFORMATION SECTION
+
+---------------------------------*/
+
+
+
+.transform-list {
+
+  display: grid;
+
+  gap: 14px;
+
+  opacity: 0.9;
+
+  margin-top: 20px;
+
+}
+
+
+
+
+
+/* -------------------------------
+
+    ARTIST: CREDIBILITY SECTION
+
+---------------------------------*/
+
+
+
+.artist-desc {
+
+  max-width: 700px;
+
+  opacity: 0.9;
+
+  margin-top: 20px;
+
+}
+
+
+
+
+
+/* -------------------------------
+
+    SCARCITY SECTION
+
+---------------------------------*/
+
+
+
+.scarcity-desc {
+
+  max-width: 700px;
+
+  margin: 22px auto;
+
+  font-size: 1.2rem;
+
+  opacity: 0.9;
+
+}
+
+
+
+
+
+/* -------------------------------
+
+    SOCIAL PROOF
+
+---------------------------------*/
+
+
+
+.testimonials {
+
+  list-style: none;
+
+  margin-top: 35px;
+
+  opacity: 0.9;
+
+}
+
+
+
+.testimonials li {
+
+  margin-bottom: 14px;
+
+  font-size: 1.15rem;
+
+}
+
+
+
+
+
+/* -------------------------------
+
+    FINAL CTA
+
+---------------------------------*/
+
+
+
+.final h2 {
+
+  margin-bottom: 25px;
+
+}
+
+
+
+.final-note {
+
+  margin-top: 22px;
+
+  font-size: 1.05rem;
+
+  opacity: 0.85;
+
+}
+
+
+
+
+
+/* -------------------------------
+
+    TRUST FOOTER
+
+---------------------------------*/
 
 
 
 footer {
 
-    text-align: center;
+  padding: 60px 0 40px;
 
-    padding: 45px 20px;
+  text-align: center;
 
-    opacity: 0.6;
-
-    font-size: 0.9rem;
+  opacity: 0.8;
 
 }
 
-/* =======================
 
-   FOMO BAR
-
-   ======================= */
-
-.fomo-sticky {
-
-    position: fixed;
-
-    top: 0;
-
-    left: 0;
-
-    width: 100%;
-
-    padding: 10px 20px;
-
-    backdrop-filter: blur(12px);
-
-    -webkit-backdrop-filter: blur(12px);
-
-    background: rgba(10, 10, 10, 0.55);
-
-    color: var(--offwhite);
-
-    font-size: 0.9rem;
-
-    text-align: center;
-
-    z-index: 999;
-
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-
-    box-shadow: 0 2px 10px rgba(0,0,0,0.25);
-
-}
-
-#fomo-text {
-    transition: opacity 0.4s ease;
-}
 
 .trust-row {
-    display: flex;
-    justify-content: center;
-    gap: 28px;
-    margin-bottom: 14px;
-    opacity: 0.9;
-    flex-wrap: wrap;
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 40px;
+
+  margin-bottom: 25px;
+
 }
+
+
 
 .trust-icon {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 0.85rem;
+
+  font-size: 0.95rem;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
 }
-
-.trust-icon svg {
-    flex-shrink: 0;
-}
-
-
