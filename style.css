@@ -48,6 +48,28 @@ body {
 
 
 
+/* -------------------------------
+
+   FOMO BAR
+
+---------------------------------*/
+
+
+
+#fomo-bar {
+
+  position: fixed;
+
+  top: 0;
+
+  width: 100%;
+
+  z-index: 9999;
+
+}
+
+
+
 h1, h2, h3 {
 
   font-weight: 700;
@@ -82,7 +104,7 @@ section {
 
   width: 100%;
 
-  padding: 100px 0;
+  padding: 90px 0;
 
 }
 
@@ -226,7 +248,7 @@ img {
 
 .hero {
 
-  padding: 140px 0 90px;
+  padding: 110px 0 70px;
 
   text-align: center;
 
@@ -328,9 +350,9 @@ img {
 
   position: absolute;
 
-  left: -80px;
+  left: -60px;
 
-  top: 50px;
+  top: 40px;
 
   opacity: 0.9;
 
@@ -358,7 +380,7 @@ img {
 
   width: 100%;
 
-  max-width: 780px;
+  max-width: 650px;
 
   border-radius: 18px;
 
@@ -392,9 +414,9 @@ img {
 
   grid-template-columns: repeat(3, 1fr);
 
-  gap: 40px;
+  gap: 50px;
 
-  margin-top: 40px;
+  margin-top: 50px;
 
 }
 
@@ -450,7 +472,9 @@ img {
 
   grid-template-columns: repeat(2, 1fr);
 
-  gap: 40px;
+  gap: 50px;
+
+  margin-top: 50px;
 
 }
 
@@ -468,7 +492,7 @@ img {
 
 .full-stack {
 
-  margin-top: 45px;
+  margin-top: 50px;
 
   opacity: 0.85;
 
@@ -502,7 +526,7 @@ img {
 
   opacity: 0.9;
 
-  margin-top: 20px;
+  margin-top: 35px;
 
 }
 
@@ -593,6 +617,14 @@ img {
     FINAL CTA
 
 ---------------------------------*/
+
+
+
+.final {
+
+  padding-bottom: 110px;
+
+}
 
 
 
