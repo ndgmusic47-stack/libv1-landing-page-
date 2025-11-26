@@ -33,7 +33,7 @@ h1, h2, h3, p, .text-center {
 /* SECTION BASE STYLE */
 section {
   width: 100%;
-  padding: 100px 20px;
+  padding: 80px 20px;
   overflow-x: hidden;
 }
 
@@ -196,4 +196,109 @@ section img,
     gap: 16px;
     padding: 0 20px;
     justify-content: center;
+}
+
+/* PAIN BLOCK */
+.pain-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.pain-subtitle {
+  font-size: 20px;
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.pain-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 35px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px 20px;
+  max-width: 420px;
+}
+
+.pain-list li {
+  font-size: 18px;
+  text-align: center;
+}
+
+.pain-bottom {
+  font-size: 18px;
+  opacity: 0.9;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.changes-desc {
+  max-width: 760px;
+  margin: 0 auto 50px;
+  font-size: 20px;
+  line-height: 1.5;
+  opacity: 0.95;
+}
+
+.artist-desc,
+.full-stack {
+  max-width: 760px;
+  margin: 0 auto 30px;
+  font-size: 19px;
+  line-height: 1.55;
+  opacity: 0.95;
+}
+
+.cta-btn.large, .cta-btn.big {
+  width: 100%;
+  max-width: 360px;
+  margin: 30px auto 0;
+  padding: 18px 20px;
+  font-size: 18px;
+}
+
+.final-note {
+  font-size: 17px;
+  opacity: 0.8;
+  margin-top: 20px;
+}
+
+.phone-ui {
+  width: 100%;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 20px;
+  box-shadow: 0 0 35px rgba(200, 80, 255, 0.35);
+}
+
+#fomo-bar {
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  background: linear-gradient(90deg, var(--neon-orchid), var(--electric-sunset));
+  color: var(--offwhite);
+  font-size: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 0 12px rgba(0,0,0,0.3);
+}
+
+#fomo-text {
+  margin: 0 auto;
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  section { padding: 55px 18px; }
+  
+  .pain-title { font-size: 28px; }
+  .pain-subtitle { font-size: 17px; }
+  .pain-list { grid-template-columns: 1fr; }
+  .pain-list li { font-size: 17px; }
+  .pain-bottom { font-size: 17px; }
+  
+  .phone-ui { max-width: 320px; }
 }
