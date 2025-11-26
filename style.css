@@ -28,7 +28,6 @@ h1 {
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 1.15;
-  text-align: center;
   margin-bottom: 20px;
 }
 
@@ -63,9 +62,47 @@ h1 {
 
 /* REMOVED: duplicate margin rule - replaced below */
 
-/* Remove forced global text-align rules */
-h1, h2, h3, p {
-  text-align: unset !important;
+/* HERO SECTION CENTER */
+.hero-section,
+.hero-section h1,
+.hero-section p,
+.hero-section .cta-button {
+  text-align: center !important;
+}
+
+/* CONTENT SECTIONS LEFT */
+.section-container,
+.section-container .section-title,
+.section-container .section-sub,
+.section-container .body-text,
+.section-container p,
+.section-container ul,
+.section-container li,
+.section-title,
+.section-sub,
+.body-text {
+  text-align: left !important;
+}
+
+/* CTA SECTIONS CENTER */
+.final-cta,
+.final-cta h2,
+.final-cta .section-title,
+.final-cta p,
+.final-cta .body-text,
+.final-cta .cta-button {
+  text-align: center !important;
+}
+
+/* LIST ALIGNMENT */
+ul, li {
+  text-align: left !important;
+}
+
+/* REMOVE ALIGNMENT FROM CONTAINERS */
+.container,
+.content-wrapper {
+  text-align: left;
 }
 
 /* SECTION BASE STYLE */
@@ -107,14 +144,12 @@ section {
   font-weight: 700;
   line-height: 1.1;
   margin-bottom: 20px;
-  text-align: center !important;
 }
 
 .hero-subtitle {
   font-size: 20px;
   opacity: 0.9;
   margin-bottom: 40px;
-  text-align: center !important;
 }
 
 /* CTA BUTTON */
@@ -149,7 +184,6 @@ section {
   color: #000;
   font-weight: 600;
   display: inline-block;
-  text-align: center;
   cursor: pointer;
 }
 
@@ -211,9 +245,19 @@ section img,
 
 /* CENTER UTILITY (for hero and specific sections) */
 .center {
-  text-align: center;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Override center alignment for content sections */
+.section-container .center {
+  text-align: left;
+}
+
+/* Keep center alignment for hero and final CTA */
+.hero-section .center,
+.final-cta .center {
+  text-align: center;
 }
 
 /* FOOTER TRUST ROW */
@@ -276,7 +320,6 @@ section img,
 
 .pain-list li {
   font-size: 18px;
-  text-align: center;
 }
 
 .pain-bottom {
