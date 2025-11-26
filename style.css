@@ -23,11 +23,51 @@ html, body {
   background: #000;
 }
 
-/* GLOBAL TEXT CENTERING */
-h1, h2, h3, p, .text-center {
+/* TYPOGRAPHY SYSTEM */
+h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.15;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.section-sub {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  line-height: 1.55;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.body-text {
+  font-size: 1rem;
+  line-height: 1.55;
+  opacity: 0.95;
+  margin-bottom: 14px;
+  text-align: left;
+}
+
+.small-text {
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+section {
+  margin: 60px 0;
+}
+
+/* Remove forced global text-align rules */
+h1, h2, h3, p {
+  text-align: unset !important;
 }
 
 /* SECTION BASE STYLE */
@@ -35,6 +75,7 @@ section {
   width: 100%;
   padding: 90px 20px;
   overflow-x: hidden;
+  margin: 60px 0;
 }
 
 /* VIBRANT BACKGROUND SETS */
@@ -79,18 +120,20 @@ section {
   );
 }
 
-/* TYPOGRAPHY */
+/* HERO TYPOGRAPHY (centered) */
 .hero-title {
   font-size: 48px;
   font-weight: 700;
   line-height: 1.1;
   margin-bottom: 20px;
+  text-align: center !important;
 }
 
 .hero-subtitle {
   font-size: 20px;
   opacity: 0.9;
   margin-bottom: 40px;
+  text-align: center !important;
 }
 
 /* CTA BUTTON */
@@ -174,7 +217,7 @@ section img,
   }
 }
 
-/* CENTER EVERYTHING ALWAYS */
+/* CENTER UTILITY (for hero and specific sections) */
 .center {
   text-align: center;
   margin-left: auto;
