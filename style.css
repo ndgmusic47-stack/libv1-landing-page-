@@ -224,15 +224,6 @@ section {
 
   }
 
-  .soft-gradient-1,
-
-  .soft-gradient-2,
-
-  .soft-gradient-3 {
-
-    overflow: hidden !important;
-
-  }
 
 }
 
@@ -265,41 +256,77 @@ img {
 
 /* -------------------------------
 
-    SOFT GRADIENT BACKGROUNDS
+    GLOBAL SECTION THEMES
 
-    (B1 — Soft Alternating)
+    (PATCH V25 — Vibrant Energy Palette)
 
 ---------------------------------*/
 
 
 
-.section-dark,
+/* Light vibrant section */
 
-.soft-gradient-2,
-
-.soft-gradient-3,
-
-.soft-gradient-4,
-
-.soft-gradient-5,
-
-.soft-gradient-6 {
+.section-light {
 
   background: linear-gradient(180deg,
 
-    #1A1E4A 0%,
+    var(--neon-orchid) 0%,
 
-    #0F1025 100%
+    var(--electric-sunset) 100%
 
   );
 
-  padding: 120px 20px;
-
   color: var(--offwhite);
+
+  padding: 100px 20px;
 
   text-align: center;
 
-  overflow: hidden;
+}
+
+
+
+/* Dark vibrant section */
+
+.section-dark {
+
+  background: linear-gradient(180deg,
+
+    var(--deep-cosmic) 0%,
+
+    #0A0C21 100%
+
+  );
+
+  color: var(--offwhite);
+
+  padding: 100px 20px;
+
+  text-align: center;
+
+}
+
+
+
+/* Mid section (magenta → orange blend) */
+
+.section-mid {
+
+  background: linear-gradient(180deg,
+
+    var(--neon-orchid) 0%,
+
+    var(--electric-sunset) 80%,
+
+    var(--deep-cosmic) 100%
+
+  );
+
+  color: var(--offwhite);
+
+  padding: 100px 20px;
+
+  text-align: center;
 
 }
 
@@ -317,9 +344,7 @@ img {
 
 .hero-section,
 
-.hero,
-
-.hero.soft-gradient-1 {
+.hero {
 
   width: 100%;
 
