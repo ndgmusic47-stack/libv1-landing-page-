@@ -308,7 +308,7 @@ section img,
   width: 100%;
   padding: 10px 0;
   text-align: center;
-  background: linear-gradient(90deg, var(--neon-orchid), var(--electric-sunset));
+  background: #000;
   color: var(--offwhite);
   font-size: 15px;
   position: sticky;
