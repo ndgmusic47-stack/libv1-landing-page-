@@ -59,6 +59,82 @@ h1 {
 
 /* REMOVED: duplicate margin rule - replaced below */
 
+/* DESKTOP READABILITY UPGRADE */
+@media (min-width: 900px) {
+
+  h1, .hero-title {
+    font-size: 60px !important;
+    line-height: 1.15;
+    max-width: 900px;
+    margin: 0 auto 24px auto;
+  }
+
+  .section-title {
+    font-size: 42px !important;
+    line-height: 1.2;
+    max-width: 900px;
+    margin: 0 auto 24px auto;
+  }
+
+  .section-sub {
+    font-size: 20px !important;
+    line-height: 1.55;
+    max-width: 850px;
+    margin: 0 auto 20px auto;
+  }
+
+  .body-text {
+    font-size: 19px !important;
+    line-height: 1.65;
+    max-width: 850px;
+    margin: 0 auto 18px auto;
+  }
+
+  ul, li {
+    font-size: 19px !important;
+    line-height: 1.65;
+    max-width: 850px;
+    margin: 0 auto 12px auto;
+  }
+}
+
+/* GLOBAL TEXT WIDTH CONTROL */
+.section-container, 
+.section-container p,
+.section-container ul,
+.section-container li,
+.section-container h2 {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* IMPROVE MOBILE READABILITY */
+@media (max-width: 899px) {
+
+  h1, .hero-title {
+    font-size: 34px !important;
+    line-height: 1.2;
+  }
+
+  .section-title {
+    font-size: 28px !important;
+    line-height: 1.3;
+  }
+
+  .section-sub,
+  .body-text,
+  ul, li {
+    font-size: 17px !important;
+    line-height: 1.6;
+  }
+}
+
+/* CENTERED TEXT CLEANUP */
+section, h1, h2, h3, p, ul, li {
+  text-align: center !important;
+}
+
 /* HERO SECTION CENTER */
 .hero-section,
 .hero-section h1,
