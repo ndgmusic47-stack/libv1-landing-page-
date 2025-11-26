@@ -20,7 +20,20 @@ html, body {
   overflow-x: hidden;
   font-family: 'Poppins', sans-serif;
   color: var(--offwhite);
-  background: transparent !important;
+}
+
+body {
+  background: linear-gradient(
+      180deg,
+      #ff5c5c 0%,
+      #ff7e00 25%,
+      #6753ff 65%,
+      #1a0038 100%
+  ) !important;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 /* TYPOGRAPHY SYSTEM */
@@ -167,6 +180,7 @@ section {
   margin: 0 !important;
   transition: background 0.6s ease-in-out;
   background-blend-mode: normal;
+  background: transparent !important;
 }
 
 /* VIBRANT BACKGROUND SETS */
@@ -175,19 +189,12 @@ section {
   /* Background now handled by .unified-bg class */
 }
 
-/* OLD BACKGROUND CLASSES - DISABLED FOR UNIFIED GRADIENT
-.section-dark {
-  background: #0f0f15;
-}
-
-.section-mid {
-  background: linear-gradient(180deg, #14141d, #1b1b27);
-}
-
+/* OLD BACKGROUND CLASSES - DISABLED FOR UNIFIED GRADIENT */
+.section-dark,
+.section-mid,
 .section-light {
-  background: linear-gradient(180deg, #1a1a22, #22222d);
+  background: transparent !important;
 }
-*/
 
 /* HERO TYPOGRAPHY (centered) */
 .hero-title {
@@ -462,6 +469,21 @@ section img,
 footer {
   background: linear-gradient(180deg, #1a1a22, #0f0f15);
   padding: 40px 20px;
+}
+
+/* PRESERVE FOMO BAR BACKGROUND */
+#fomo-bar,
+.fomo-bar,
+.fomo-section {
+  background: #000 !important; /* KEEP EXISTING BACKGROUND */
+}
+
+/* PRESERVE CREDIBILITY FOOTER BACKGROUND */
+footer,
+.trust-footer,
+.credibility-footer,
+footer.trust {
+  background: linear-gradient(180deg, #1a1a22, #0f0f15) !important; /* KEEP EXISTING BACKGROUND */
 }
 
 /* Mobile adjustments */
