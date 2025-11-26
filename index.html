@@ -26,7 +26,7 @@
 
     <div id="fomo-bar" class="fomo-sticky">
 
-        <span id="fomo-text">14 artists viewed this page recently • 486 early access spots remaining</span>
+        <span id="fomo-text">14 artists viewed this page recently, 486 early access spots remaining</span>
 
     </div>
 
@@ -146,27 +146,25 @@
 
             </p>
 
-            <img src="/assets/music%20note%20box.png" alt="Music Document Icon" class="feature-icon-img">
-
             <div class="changes-grid">
 
 
 
-            <div><img src="/assets/wav%20file%20box.jpg" class="feature-icon-img"><p>Create beats</p></div>
+            <div><p>Create beats</p></div>
 
-            <div><img src="/assets/wav%20file%20box.jpg" class="feature-icon-img"><p>Upload vocals for mixing</p></div>
-
-
-
-            <div><img src="/assets/wav%20file%20box.jpg" class="feature-icon-img"><p>Auto-generate lyrics</p></div>
-
-            <div><img src="/assets/wav%20file%20box.jpg" class="feature-icon-img"><p>Create visuals & content</p></div>
+            <div><p>Upload vocals for mixing</p></div>
 
 
 
-            <div><img src="/assets/wav%20file%20box.jpg" class="feature-icon-img"><p>Collaborate with other artists</p></div>
+            <div><p>Auto-generate lyrics</p></div>
 
-            <div><img src="/assets/wav%20file%20box.jpg" class="feature-icon-img"><p>Pitch for playlists, features & sync</p></div>
+            <div><p>Create visuals & content</p></div>
+
+
+
+            <div><p>Collaborate with other artists</p></div>
+
+            <div><p>Pitch for playlists, features & sync</p></div>
 
 
 
@@ -176,21 +174,19 @@
 
             <!-- FULL FEATURE STACK -->
 
-            <img src="/assets/wav%20file%20box.jpg" alt="WAV File Icon" class="feature-icon-img">
+            <div class="full-stack">
 
-            <ul class="full-stack">
+                <p>Organise stems and catalogue</p>
 
-                <li>Organise stems and catalogue</li>
+                <p>Master tracks automatically</p>
 
-                <li>Master tracks automatically</li>
+                <p>Create short-form content for social</p>
 
-                <li>Create short-form content for social</li>
+                <p>Prepare distribution files in one click</p>
 
-                <li>Prepare distribution files in one click</li>
+                <p>Drop music weekly with zero bottlenecks</p>
 
-                <li>Drop music weekly with zero bottlenecks</li>
-
-            </ul>
+            </div>
 
         </div>
 
@@ -212,19 +208,19 @@
 
             <h2>Transformation You Can Feel</h2>
 
-            <ul class="transform-list">
+            <div class="transform-list">
 
-                <li>You go from slow → superhuman</li>
+                <p>You go from slow → superhuman</p>
 
-                <li>You go from overwhelmed → organised</li>
+                <p>You go from overwhelmed → organised</p>
 
-                <li>You go from inconsistent → unstoppable</li>
+                <p>You go from inconsistent → unstoppable</p>
 
-                <li>You go from alone → backed by a full team</li>
+                <p>You go from alone → backed by a full team</p>
 
-                <li>You go from ideas stuck in your head → songs released</li>
+                <p>You go from ideas stuck in your head → songs released</p>
 
-            </ul>
+            </div>
 
         </div>
 
@@ -399,7 +395,7 @@ function rotateFomo() {
 
 
 
-        el.textContent = `${viewed} artists viewed this page recently • ${spots} early access spots remaining`;
+        el.textContent = `${viewed} artists viewed this page recently, ${spots} early access spots remaining`;
         el.style.opacity = 1;
     }, 280);
 }

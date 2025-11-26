@@ -147,11 +147,11 @@ section img,
 }
 
 /* ICONS */
-.feature-icon-img {
+/* .feature-icon-img {
   width: 120px;
   max-width: 120px;
   filter: drop-shadow(0 0 12px rgba(255, 184, 0, 0.6));
-}
+} */
 
 /* GRIDS */
 .features-grid,
@@ -266,6 +266,22 @@ section img,
   font-size: 19px;
   line-height: 1.55;
   opacity: 0.95;
+}
+
+.full-stack p {
+  margin-bottom: 10px;
+}
+
+.transform-list {
+  max-width: 760px;
+  margin: 0 auto 30px;
+  font-size: 19px;
+  line-height: 1.55;
+  opacity: 0.95;
+}
+
+.transform-list p {
+  margin-bottom: 10px;
 }
 
 .cta-btn.large, .cta-btn.big {
