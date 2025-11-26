@@ -1,1012 +1,199 @@
-/* ===========================================================
-
-   PREMIUM SaaS STYLE — CLEAN REBUILD (Patch V9)
-
-   This file replaces ALL previous CSS. Do not merge with old styles.
-
-   =========================================================== */
-
-/* PATCH V24: GLOBAL COLOR VARIABLES */
-
 :root {
-
   --indigo: #4B0082;
-
   --gold: #FFB800;
-
   --offwhite: #F4F4F4;
-
-  /* NEW lively energy colors */
-
   --neon-orchid: #C850FF;
-
   --electric-sunset: #FF6F40;
-
   --deep-cosmic: #1A1E4A;
-
 }
 
-
-
-
-
-/* -------------------------------
-
-    GLOBAL RESET + TYPOGRAPHY
-
----------------------------------*/
-
-
-/* PATCH V21: GLOBAL NO-WOBBLE LOCK */
+/* GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
 
 html, body {
-
-  overflow-x: hidden !important;
-
-  max-width: 100% !important;
-
-  width: 100% !important;
-
-  position: relative !important;
-
-}
-
-
-/* Desktop centering */
-
-@media (min-width: 1024px) {
-
-  body, html {
-
-    margin: 0 auto !important;
-
-    padding: 0 !important;
-
-    overflow-x: hidden !important;
-
-    width: 100% !important;
-
-    max-width: 100% !important;
-
-    position: relative;
-
-  }
-
-}
-
-
-* {
-
-  box-sizing: border-box;
-
-  margin: 0;
-
-  padding: 0;
-
-}
-
-
-
-body {
-
-  background: #0b0812;
-
-  color: #ffffff;
-
-  font-family: 'Poppins', sans-serif;
-
-  font-weight: 400;
-
-  line-height: 1.5;
-
-  padding-top: 60px;
-
-}
-
-
-
-.center {
-
   width: 100%;
-
-  max-width: 900px;
-
-  margin-left: auto !important;
-
-  margin-right: auto !important;
-
-  text-align: center;
-
-  padding-left: 20px;
-
-  padding-right: 20px;
-
-  display: block;
-
-}
-
-
-
-/* -------------------------------
-
-   FOMO BAR
-
----------------------------------*/
-
-
-
-#fomo-bar,
-
-.fomo-sticky {
-
-  width: 100%;
-
-  max-width: 100%;
-
-  left: 0;
-
-  right: 0;
-
-  position: fixed;
-
-  top: 0;
-
-  z-index: 9999;
-
-  padding: 10px 20px;
-
-  background: rgba(10,10,10,0.6);
-
-  color: white;
-
-  text-align: center;
-
-  backdrop-filter: blur(10px);
-
-}
-
-
-
-h1, h2, h3, p {
-
-  text-align: center !important;
-
-  margin-left: auto !important;
-
-  margin-right: auto !important;
-
-}
-
-h1, h2, h3 {
-
-  font-weight: 700;
-
-}
-
-
-
-h2 {
-
-  font-size: 2rem;
-
-  margin-bottom: 25px;
-
-}
-
-
-
-p {
-
-  font-size: 1.15rem;
-
-  margin-bottom: 18px;
-
-  opacity: 0.9;
-
-}
-
-
-
-section {
-
-  padding: 60px 0;
-
   overflow-x: hidden;
-
+  font-family: 'Poppins', sans-serif;
+  color: var(--offwhite);
+  background: #000;
 }
 
-
-@media (min-width: 1024px) {
-
-  section {
-
-    overflow-x: hidden !important;
-
-  }
-
-
+/* GLOBAL TEXT CENTERING */
+h1, h2, h3, p, .text-center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-
-
-img {
-
-  max-width: 100%;
-
-  display: block;
-
+/* SECTION BASE STYLE */
+section {
+  width: 100%;
+  padding: 100px 20px;
+  overflow-x: hidden;
 }
 
-
-
-
-
-/* -------------------------------
-
-    CONTAINERS
-
----------------------------------*/
-
-
-
-
-
-
-
-
-/* -------------------------------
-
-    GLOBAL SECTION THEMES
-
-    (PATCH V25 — Vibrant Energy Palette)
-
----------------------------------*/
-
-
-
-/* Light vibrant section */
+/* VIBRANT BACKGROUND SETS */
+.hero-section {
+  background: linear-gradient(
+    180deg,
+    var(--indigo) 0%,
+    var(--neon-orchid) 35%,
+    var(--electric-sunset) 70%,
+    var(--deep-cosmic) 100%
+  );
+}
 
 .section-light {
-
-  background: linear-gradient(180deg,
-
+  background: linear-gradient(
+    180deg,
     var(--neon-orchid) 0%,
-
     var(--electric-sunset) 100%
-
   );
-
-  color: var(--offwhite);
-
-  padding: 100px 20px;
-
-  text-align: center;
-
 }
-
-
-
-/* Dark vibrant section */
-
-.section-dark {
-
-  background: linear-gradient(180deg,
-
-    var(--deep-cosmic) 0%,
-
-    #0A0C21 100%
-
-  );
-
-  color: var(--offwhite);
-
-  padding: 100px 20px;
-
-  text-align: center;
-
-}
-
-
-
-/* Mid section (magenta → orange blend) */
 
 .section-mid {
-
-  background: linear-gradient(180deg,
-
+  background: linear-gradient(
+    180deg,
     var(--neon-orchid) 0%,
-
-    var(--electric-sunset) 80%,
-
-    var(--deep-cosmic) 100%
-
-  );
-
-  color: var(--offwhite);
-
-  padding: 100px 20px;
-
-  text-align: center;
-
-}
-
-
-
-
-
-/* -------------------------------
-
-    HERO SECTION
-
----------------------------------*/
-
-
-
-.hero-section,
-
-.hero {
-
-  width: 100%;
-
-  padding: 140px 20px 120px;
-
-  text-align: center;
-
-  background: linear-gradient(180deg,
-
-    var(--indigo) 0%,
-
-    var(--neon-orchid) 35%,
-
     var(--electric-sunset) 70%,
-
     var(--deep-cosmic) 100%
-
-  ) !important;
-
-  color: var(--offwhite);
-
+  );
 }
 
+.section-dark {
+  background: linear-gradient(
+    180deg,
+    var(--deep-cosmic) 0%,
+    #050614 100%
+  );
+}
 
-
-
-
-
-.hero-title,
-
-.hero h1 {
-
+/* TYPOGRAPHY */
+.hero-title {
   font-size: 48px;
-
   font-weight: 700;
-
-  line-height: 1.15;
-
+  line-height: 1.1;
   margin-bottom: 20px;
-
-  text-align: center;
-
 }
-
-
-
-.subtitle,
 
 .hero-subtitle {
-
   font-size: 20px;
-
-  line-height: 1.4;
-
-  opacity: 0.85;
-
+  opacity: 0.9;
   margin-bottom: 40px;
-
-  text-align: center;
-
-  max-width: 700px;
-
-  margin-left: auto;
-
-  margin-right: auto;
-
 }
 
-
-
+/* CTA BUTTON */
 .cta-btn {
-
-  display: inline-block;
-
-  margin: 20px auto 0 auto;
-
-  text-align: center;
-
   background: linear-gradient(90deg, var(--gold), var(--electric-sunset));
-
   border: none;
-
   padding: 16px 40px;
-
   border-radius: 12px;
-
   font-size: 20px;
-
   font-weight: 600;
-
   cursor: pointer;
-
   color: #1A1E4A;
-
-  text-decoration: none;
-
+  margin-top: 20px;
   box-shadow: 0 0 20px var(--neon-orchid);
-
   transition: transform 0.2s, box-shadow 0.2s;
-
 }
-
-
-@media (min-width: 1024px) {
-
-  .cta-btn {
-
-    display: inline-block;
-
-    margin-left: auto !important;
-
-    margin-right: auto !important;
-
-    text-align: center;
-
-  }
-
-}
-
-
 
 .cta-btn:hover {
-
   transform: scale(1.05);
-
   box-shadow: 0 0 28px var(--neon-orchid);
-
 }
 
-
-
-.cta-btn.large {
-
-  padding: 18px 42px;
-
-  font-size: 1.25rem;
-
-}
-
-
-
-.cta-btn.big {
-
-  padding: 20px 46px;
-
-  border-radius: 14px;
-
-  font-size: 1.35rem;
-
-}
-
-
-
-.hero-mockup {
-
+/* HERO MOCKUP IMAGE */
+.hero-mockup-img {
   width: 90%;
-
-  max-width: 900px;
-
-  margin: 60px auto 0;
-
-  display: block;
-
-  border-radius: 14px;
-
-  box-shadow: 0 0 40px rgba(200, 80, 255, 0.35);
-
-  height: auto;
-
-}
-
-
-
-.ai-sparkle {
-
-  width: 90px;
-
-  margin: 40px auto 0 auto;
-
-  display: block;
-
-}
-
-
-
-
-
-/* -------------------------------
-
-    YOU'RE DOING EVERYTHING ALONE
-
----------------------------------*/
-
-
-
-
-
-
-.alone-section h2 {
-
-  margin-bottom: 20px;
-
-}
-
-
-
-.features-section {
-
-  width: 100%;
-
   max-width: 1100px;
-
-  margin: 120px auto;
-
-  text-align: center;
-
-}
-
-
-
-.features-title {
-
-  font-size: 36px;
-
-  font-weight: 700;
-
-  margin-bottom: 40px;
-
-}
-
-
-
-.features-grid,
-
-.alone-grid,
-
-.changes-grid {
-
-  width: 100%;
-
-  margin: 0 auto;
-
-  display: grid;
-
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-
-  gap: 40px;
-
-}
-
-
-@media (min-width: 1024px) {
-
-  .alone-grid,
-
-  .changes-grid {
-
-    margin-left: auto !important;
-
-    margin-right: auto !important;
-
-    justify-items: center;
-
-    align-items: start;
-
-    width: 100%;
-
-    max-width: 900px;
-
-  }
-
-}
-
-
-
-.feature-item,
-
-.alone-grid div,
-
-.changes-grid div {
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  gap: 14px;
-
-  justify-content: center;
-
-  text-align: center;
-
-  color: var(--offwhite);
-
-}
-
-
-
-.feature-icon,
-
-.alone-grid img,
-
-.changes-grid img {
-
-  width: 40px;
-
-  height: 40px;
-
+  margin: 60px auto 0;
   display: block;
-
-  margin: 0 auto;
-
-  margin-left: auto !important;
-
-  margin-right: auto !important;
-
-  filter: drop-shadow(0 0 12px var(--neon-orchid));
-
+  border-radius: 20px;
+  box-shadow: 0 0 60px rgba(200, 80, 255, 0.45);
 }
 
-
-
-.alone-section p.alone-desc {
-
-  margin-top: 40px;
-
-  max-width: 720px;
-
-  opacity: 0.85;
-
+/* UNIVERSAL IMAGE RULES */
+section img,
+.section-img,
+.phone-ui,
+.feature-icon-img {
+  display: block;
+  margin: 40px auto;
+  width: 90%;
+  max-width: 900px;
+  border-radius: 16px;
 }
 
-
-
-
-
-/* -------------------------------
-
-    CHANGES EVERYTHING
-
----------------------------------*/
-
-
-
-.changes-desc {
-
-  max-width: 750px;
-
-  margin: 0 auto 40px auto;
-
-  opacity: 0.85;
-
+/* ICONS */
+.feature-icon-img {
+  width: 120px;
+  max-width: 120px;
+  filter: drop-shadow(0 0 12px rgba(255, 184, 0, 0.6));
 }
 
-
-
-
-
-
-.transform-list,
-
-.full-stack {
-
-  list-style: none;
-
-  padding: 0;
-
-  margin: 0 auto;
-
-  text-align: center;
-
-}
-
-
-
-.full-stack {
-
-  margin-top: 50px;
-
-  opacity: 0.85;
-
-}
-
-
-
-.transform-list {
-
+/* GRIDS */
+.features-grid,
+.changes-grid,
+.alone-grid,
+.workflow-grid {
   display: grid;
-
-  gap: 14px;
-
-  opacity: 0.9;
-
-  margin-top: 35px;
-
-}
-
-
-
-.transform-list li,
-
-.full-stack li {
-
-  margin: 10px 0;
-
-}
-
-
-
-
-
-/* -------------------------------
-
-    ARTIST: CREDIBILITY SECTION
-
----------------------------------*/
-
-
-
-.artist-desc {
-
-  max-width: 700px;
-
-  opacity: 0.9;
-
-  margin-top: 20px;
-
-}
-
-
-
-
-
-/* -------------------------------
-
-    SCARCITY SECTION
-
----------------------------------*/
-
-
-
-.scarcity-desc {
-
-  max-width: 700px;
-
-  margin: 22px auto;
-
-  font-size: 1.2rem;
-
-  opacity: 0.9;
-
-}
-
-
-
-
-
-/* -------------------------------
-
-    SOCIAL PROOF
-
----------------------------------*/
-
-
-
-.testimonials {
-
-  list-style: none;
-
-  margin-top: 35px;
-
-  opacity: 0.9;
-
-}
-
-
-
-.testimonials li {
-
-  margin-bottom: 14px;
-
-  font-size: 1.15rem;
-
-}
-
-
-
-
-
-/* -------------------------------
-
-    FINAL CTA
-
----------------------------------*/
-
-
-
-.final {
-
-  padding-bottom: 110px;
-
-}
-
-
-
-.final h2 {
-
-  margin-bottom: 25px;
-
-}
-
-
-
-.final-note {
-
-  margin-top: 22px;
-
-  font-size: 1.05rem;
-
-  opacity: 0.85;
-
-}
-
-
-
-
-
-/* -------------------------------
-
-    TRUST FOOTER
-
----------------------------------*/
-
-
-
-footer {
-
-  padding: 60px 0 40px;
-
-  text-align: center;
-
-  opacity: 0.8;
-
-}
-
-
-
-.trust-row {
-
-  display: flex;
-
-  justify-content: center;
-
   gap: 40px;
-
-  margin-bottom: 25px;
-
+  grid-template-columns: 1fr;
+  padding: 20px;
+  margin: 0 auto;
 }
 
+@media (min-width: 768px) {
+  .features-grid,
+  .changes-grid,
+  .alone-grid,
+  .workflow-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+}
 
+/* CENTER EVERYTHING ALWAYS */
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* FOOTER TRUST ROW */
+.trust-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 100%;
+    padding: 20px 10px;
+}
 
 .trust-icon {
-
-  font-size: 0.95rem;
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 8px;
-
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    white-space: nowrap;
 }
 
-
-
-/* -------------------------------
-
-    MOBILE RESPONSIVE
-
----------------------------------*/
-
-
-
-@media (max-width: 768px) {
-
-  h1 {
-
-    font-size: 1.9rem;
-
-    line-height: 1.3;
-
+@media (max-width: 480px) {
+  .trust-icon {
+      font-size: 12px;
   }
+}
 
-  h2 {
-
-    font-size: 1.55rem;
-
-  }
-
-  .subtitle {
-
-    font-size: 1rem;
-
-    max-width: 90%;
-
-  }
-
-  .hero {
-
-    padding: 140px 0 50px;
-
-  }
-
-  body {
-
-    padding-top: 80px !important;
-
-  }
-
-  .cta-btn {
-
-    padding: 12px 22px;
-
-    font-size: 1rem;
-
-  }
-
-  .alone-grid,
-
-  .changes-grid {
-
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-
-    gap: 22px;
-
-  }
-
-  section {
-
-    padding: 50px 0;
-
-    overflow-x: hidden;
-
-  }
-
-  #fomo-bar,
-
-  .fomo-sticky {
-
-    font-size: 0.85rem;
-
-    padding: 12px 10px;
-
-  }
-
-  .alone-grid div,
-
-  .changes-grid div {
-
-    max-width: 160px;
-
-  }
-
+/* TESTIMONIALS SPACING */
+.testimonials {
+    list-style: none;
+    margin-top: 30px;
+    display: grid;
+    gap: 16px;
+    padding: 0 20px;
+    justify-content: center;
 }
