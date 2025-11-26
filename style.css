@@ -20,7 +20,7 @@ html, body {
   overflow-x: hidden;
   font-family: 'Poppins', sans-serif;
   color: var(--offwhite);
-  background: #000;
+  background: transparent !important;
 }
 
 /* TYPOGRAPHY SYSTEM */
@@ -90,22 +90,18 @@ section {
   overflow-x: hidden;
   margin: 0 !important;
   transition: background 0.6s ease-in-out;
+  background-blend-mode: normal;
 }
 
 /* VIBRANT BACKGROUND SETS */
+/* Hero section now uses unified-bg class */
 .hero-section {
-  background: linear-gradient(
-    180deg,
-    #4B0082 0%,
-    #7A1BCC 25%,
-    #C850FF 55%,
-    #FF6F40 85%,
-    #1A1E4A 100%
-  );
+  /* Background now handled by .unified-bg class */
 }
 
+/* OLD BACKGROUND CLASSES - DISABLED FOR UNIFIED GRADIENT
 .section-dark {
-  background: #0f0f15;  /* deep indigo-black tone */
+  background: #0f0f15;
 }
 
 .section-mid {
@@ -115,6 +111,7 @@ section {
 .section-light {
   background: linear-gradient(180deg, #1a1a22, #22222d);
 }
+*/
 
 /* HERO TYPOGRAPHY (centered) */
 .hero-title {
@@ -432,4 +429,11 @@ li {
 
 .hero-section, .final-cta {
   text-align: center !important;
+}
+
+/* PREMIUM SAAS UNIFIED BACKGROUND */
+.unified-bg {
+  background: linear-gradient(180deg, #0c0c15 0%, #131326 40%, #1a1a33 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
