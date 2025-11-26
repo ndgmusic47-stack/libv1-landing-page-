@@ -22,6 +22,13 @@
 
 <body>
 
+    <!-- FOMO BAR (kept as-is, do not remove) -->
+
+    <div id="fomo-bar" class="fomo-sticky">
+
+        <span id="fomo-text">14 artists viewed this page recently, 486 early access spots remaining</span>
+
+    </div>
 
 
 
@@ -184,9 +191,46 @@ without burning out.
 
 
 
+
     <!-- ========================= -->
 
-    <!--   MECHANISM SECTION       -->
+    <!--   TRANSFORMATION SECTION  -->
+
+    <!-- ========================= -->
+
+    <section class="section-light">
+
+        <div class="center">
+
+            <h2 class="section-title">How Your Life Changes</h2>
+
+            <p class="body-text">You go from inconsistent to unstoppable.</p>
+
+            <p class="body-text">You go from overthinking to releasing.</p>
+
+            <p class="body-text">You go from stuck to daily progress.</p>
+
+            <p class="body-text">You go from "I should drop more" to dropping weekly.</p>
+
+
+
+            <p class="body-text">
+
+You start moving like an artist with real momentum.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- ========================= -->
+
+    <!--   BUILT BY AN ARTIST      -->
 
     <!-- ========================= -->
 
@@ -232,80 +276,6 @@ Everything moves from idea to finished release to content plan.
 
 
 
-
-    <!-- ========================= -->
-
-    <!--   TRANSFORMATION SECTION  -->
-
-    <!-- ========================= -->
-
-    <section class="section-light">
-
-        <div class="center">
-
-            <h2 class="section-title">How Your Life Changes</h2>
-
-            <p class="body-text">You go from inconsistent to unstoppable.</p>
-
-            <p class="body-text">You go from overthinking to releasing.</p>
-
-            <p class="body-text">You go from stuck to daily progress.</p>
-
-            <p class="body-text">You go from "I should drop more" to dropping weekly.</p>
-
-
-
-            <p class="body-text">
-
-You start moving like an artist with real momentum.
-
-            </p>
-
-        </div>
-
-    </section>
-
-
-
-
-
-    <!-- ========================= -->
-
-
-
-
-    <!-- ========================= -->
-
-    <!--      SOCIAL PROOF         -->
-
-    <!-- ========================= -->
-
-    <section class="section-mid">
-
-        <div class="center">
-
-            <img src="/assets/phone%20playing%20tunes.webp" alt="Creator Phone UI" class="phone-ui">
-
-            <h2 class="section-title">What Artists Are Saying</h2>
-
-            <ul class="body-text">
-
-              <li>⭐⭐⭐⭐⭐ "This helped me finally finish songs."</li>
-
-              <li>⭐⭐⭐⭐⭐ "Feels like having a full team."</li>
-
-              <li>⭐⭐⭐⭐⭐ "I'm dropping music faster than ever."</li>
-
-              <li>⭐⭐⭐⭐⭐ "Everything I needed was in one place."</li>
-
-            </ul>
-
-        </div>
-
-    </section>
-
-
-
     <!-- ========================= -->
 
     <!--        SCARCITY           -->
@@ -339,6 +309,39 @@ You start moving like an artist with real momentum.
         </div>
 
     </section>
+
+
+
+    <!-- ========================= -->
+
+    <!--      SOCIAL PROOF         -->
+
+    <!-- ========================= -->
+
+    <section class="section-mid">
+
+        <div class="center">
+
+            <img src="/assets/phone%20playing%20tunes.webp" alt="Creator Phone UI" class="phone-ui">
+
+            <h2 class="section-title">What Artists Are Saying</h2>
+
+            <ul class="body-text">
+
+              <li>⭐⭐⭐⭐⭐ "This helped me finally finish songs."</li>
+
+              <li>⭐⭐⭐⭐⭐ "Feels like having a full team."</li>
+
+              <li>⭐⭐⭐⭐⭐ "I'm dropping music faster than ever."</li>
+
+              <li>⭐⭐⭐⭐⭐ "Everything I needed was in one place."</li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
 
 
 
@@ -395,6 +398,43 @@ Cancel anytime. If you don't make real progress in 30 days, you get your money b
 
 
 
+    <script>
+const baseSpots = 500;
+let savedSpots = localStorage.getItem("spotsRemaining");
+if (!savedSpots) savedSpots = baseSpots - Math.floor(Math.random()*10);
+localStorage.setItem("spotsRemaining", savedSpots);
+
+function decaySpots() {
+    let current = parseInt(localStorage.getItem("spotsRemaining"), 10);
+    if (Math.random() < 0.1 && current > 450) {
+        current -= 1;
+        localStorage.setItem("spotsRemaining", current);
+    }
+}
+
+const viewedRanges = [9, 11, 14, 18, 22, 15, 12];
+
+function rotateFomo() {
+    const el = document.getElementById("fomo-text");
+    el.style.opacity = 0.2;
+
+
+
+    setTimeout(() => {
+        const viewed = viewedRanges[Math.floor(Math.random() * viewedRanges.length)];
+        decaySpots();
+        const spots = localStorage.getItem("spotsRemaining");
+
+
+
+        el.textContent = `${viewed} artists viewed this page recently, ${spots} early access spots remaining`;
+        el.style.opacity = 1;
+    }, 280);
+}
+
+rotateFomo();
+setInterval(rotateFomo, 15000);
+</script>
 
 </body>
 
