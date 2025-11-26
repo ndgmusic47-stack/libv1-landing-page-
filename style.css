@@ -17,14 +17,28 @@
 ---------------------------------*/
 
 
+/* PATCH V21: GLOBAL NO-WOBBLE LOCK */
+
+html, body {
+
+  overflow-x: hidden !important;
+
+  max-width: 100% !important;
+
+  width: 100% !important;
+
+  position: relative !important;
+
+}
+
 
 * {
+
+  box-sizing: border-box;
 
   margin: 0;
 
   padding: 0;
-
-  box-sizing: border-box;
 
 }
 
@@ -54,7 +68,11 @@ body {
 
   max-width: 900px;
 
-  margin: 0 auto;
+  margin-left: auto;
+
+  margin-right: auto;
+
+  padding: 0 16px;
 
   text-align: center;
 
@@ -70,13 +88,21 @@ body {
 
 
 
-#fomo-bar, .fomo-sticky {
+#fomo-bar,
+
+.fomo-sticky {
+
+  width: 100%;
+
+  max-width: 100%;
+
+  left: 0;
+
+  right: 0;
 
   position: fixed;
 
   top: 0;
-
-  width: 100%;
 
   z-index: 9999;
 
@@ -134,15 +160,7 @@ section {
 
   padding: 60px 0;
 
-}
-
-
-
-.alone-section,
-
-.changes-section {
-
-  padding-top: 60px;
+  overflow-x: hidden;
 
 }
 
@@ -191,6 +209,8 @@ img {
 
     radial-gradient(circle at bottom left, rgba(75,0,130,0.32), transparent 42%);
 
+  overflow: hidden;
+
 }
 
 
@@ -200,6 +220,8 @@ img {
   background:
 
     linear-gradient(180deg, #0d0a17 0%, #100c19 100%);
+
+  overflow: hidden;
 
 }
 
@@ -212,6 +234,8 @@ img {
     radial-gradient(circle at center, rgba(138,92,255,0.07), transparent 70%),
 
     linear-gradient(180deg, #0a0711 0%, #0d0a16 100%);
+
+  overflow: hidden;
 
 }
 
@@ -261,7 +285,11 @@ img {
 
 .hero {
 
-  padding: 140px 0 80px;
+  width: 100%;
+
+  margin: 0 auto;
+
+  padding: 140px 0 60px;
 
   text-align: center;
 
@@ -405,7 +433,9 @@ img {
 
 .changes-grid {
 
-  margin-top: 40px;
+  width: 100%;
+
+  margin: 0 auto;
 
   display: grid;
 
@@ -768,6 +798,8 @@ footer {
 
     padding: 50px 0;
 
+    overflow-x: hidden;
+
   }
 
   #fomo-bar,
@@ -777,6 +809,14 @@ footer {
     font-size: 0.85rem;
 
     padding: 12px 10px;
+
+  }
+
+  .alone-grid div,
+
+  .changes-grid div {
+
+    max-width: 160px;
 
   }
 
