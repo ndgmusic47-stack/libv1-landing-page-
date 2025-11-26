@@ -6,6 +6,26 @@
 
    =========================================================== */
 
+/* PATCH V24: GLOBAL COLOR VARIABLES */
+
+:root {
+
+  --indigo: #4B0082;
+
+  --gold: #FFB800;
+
+  --offwhite: #F4F4F4;
+
+  /* NEW lively energy colors */
+
+  --neon-orchid: #C850FF;
+
+  --electric-sunset: #FF6F40;
+
+  --deep-cosmic: #1A1E4A;
+
+}
+
 
 
 
@@ -253,73 +273,33 @@ img {
 
 
 
-.soft-gradient-1 {
+.section-dark,
 
-  background:
+.soft-gradient-2,
 
-    radial-gradient(circle at top right, rgba(255,184,0,0.18), transparent 40%),
+.soft-gradient-3,
 
-    radial-gradient(circle at bottom left, rgba(75,0,130,0.32), transparent 42%);
+.soft-gradient-4,
 
-  overflow: hidden;
-
-}
-
-
-
-.soft-gradient-2 {
-
-  background:
-
-    linear-gradient(180deg, #0d0a17 0%, #100c19 100%);
-
-  overflow: hidden;
-
-}
-
-
-
-.soft-gradient-3 {
-
-  background:
-
-    radial-gradient(circle at center, rgba(138,92,255,0.07), transparent 70%),
-
-    linear-gradient(180deg, #0a0711 0%, #0d0a16 100%);
-
-  overflow: hidden;
-
-}
-
-
-
-.soft-gradient-4 {
-
-  background:
-
-    linear-gradient(180deg, #100b1e 0%, #0e0a15 100%);
-
-}
-
-
-
-.soft-gradient-5 {
-
-  background:
-
-    radial-gradient(circle at center, rgba(255,184,0,0.1), transparent 65%),
-
-    #0f0a18;
-
-}
-
-
+.soft-gradient-5,
 
 .soft-gradient-6 {
 
-  background:
+  background: linear-gradient(180deg,
 
-    linear-gradient(180deg, #0a0711 0%, #0d0a16 100%);
+    #1A1E4A 0%,
+
+    #0F1025 100%
+
+  );
+
+  padding: 120px 20px;
+
+  color: var(--offwhite);
+
+  text-align: center;
+
+  overflow: hidden;
 
 }
 
@@ -335,15 +315,31 @@ img {
 
 
 
-.hero {
+.hero-section,
+
+.hero,
+
+.hero.soft-gradient-1 {
 
   width: 100%;
 
-  margin: 0 auto;
-
-  padding: 140px 0 60px;
+  padding: 140px 20px 120px;
 
   text-align: center;
+
+  background: linear-gradient(180deg,
+
+    var(--indigo) 0%,
+
+    var(--neon-orchid) 35%,
+
+    var(--electric-sunset) 70%,
+
+    var(--deep-cosmic) 100%
+
+  ) !important;
+
+  color: var(--offwhite);
 
 }
 
@@ -351,12 +347,18 @@ img {
 
 
 
+
+.hero-title,
 
 .hero h1 {
 
-  font-size: 2.8rem;
+  font-size: 48px;
 
-  font-weight: 600;
+  font-weight: 700;
+
+  line-height: 1.15;
+
+  margin-bottom: 20px;
 
   text-align: center;
 
@@ -364,13 +366,25 @@ img {
 
 
 
-.subtitle {
+.subtitle,
+
+.hero-subtitle {
+
+  font-size: 20px;
+
+  line-height: 1.4;
+
+  opacity: 0.85;
+
+  margin-bottom: 40px;
+
+  text-align: center;
 
   max-width: 700px;
 
-  margin: 20px auto;
+  margin-left: auto;
 
-  opacity: 0.9;
+  margin-right: auto;
 
 }
 
@@ -384,21 +398,27 @@ img {
 
   text-align: center;
 
-  background: #FFB800;
+  background: linear-gradient(90deg, var(--gold), var(--electric-sunset));
 
-  padding: 16px 38px;
+  border: none;
+
+  padding: 16px 40px;
 
   border-radius: 12px;
 
-  font-size: 1.15rem;
+  font-size: 20px;
 
   font-weight: 600;
 
-  color: #120d1c;
+  cursor: pointer;
+
+  color: #1A1E4A;
 
   text-decoration: none;
 
-  transition: opacity 0.2s ease;
+  box-shadow: 0 0 20px var(--neon-orchid);
+
+  transition: transform 0.2s, box-shadow 0.2s;
 
 }
 
@@ -423,7 +443,9 @@ img {
 
 .cta-btn:hover {
 
-  opacity: 0.85;
+  transform: scale(1.05);
+
+  box-shadow: 0 0 28px var(--neon-orchid);
 
 }
 
@@ -453,11 +475,17 @@ img {
 
 .hero-mockup {
 
+  width: 90%;
+
+  max-width: 900px;
+
+  margin: 60px auto 0;
+
   display: block;
 
-  margin: 60px auto 0 auto;
+  border-radius: 14px;
 
-  max-width: 820px;
+  box-shadow: 0 0 40px rgba(200, 80, 255, 0.35);
 
   height: auto;
 
@@ -498,6 +526,34 @@ img {
 
 
 
+.features-section {
+
+  width: 100%;
+
+  max-width: 1100px;
+
+  margin: 120px auto;
+
+  text-align: center;
+
+}
+
+
+
+.features-title {
+
+  font-size: 36px;
+
+  font-weight: 700;
+
+  margin-bottom: 40px;
+
+}
+
+
+
+.features-grid,
+
 .alone-grid,
 
 .changes-grid {
@@ -508,7 +564,7 @@ img {
 
   display: grid;
 
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 
   gap: 40px;
 
@@ -539,6 +595,8 @@ img {
 
 
 
+.feature-item,
+
 .alone-grid div,
 
 .changes-grid div {
@@ -549,23 +607,27 @@ img {
 
   align-items: center;
 
-  gap: 12px;
+  gap: 14px;
 
   justify-content: center;
 
   text-align: center;
 
+  color: var(--offwhite);
+
 }
 
 
+
+.feature-icon,
 
 .alone-grid img,
 
 .changes-grid img {
 
-  width: 38px;
+  width: 40px;
 
-  height: 38px;
+  height: 40px;
 
   display: block;
 
@@ -574,6 +636,8 @@ img {
   margin-left: auto !important;
 
   margin-right: auto !important;
+
+  filter: drop-shadow(0 0 12px var(--neon-orchid));
 
 }
 
