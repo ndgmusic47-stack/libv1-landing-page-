@@ -36,7 +36,6 @@ h1 {
   font-weight: 600;
   line-height: 1.25;
   margin-bottom: 20px;
-  text-align: left;
 }
 
 .section-sub {
@@ -44,7 +43,6 @@ h1 {
   opacity: 0.9;
   line-height: 1.55;
   margin-bottom: 16px;
-  text-align: left;
 }
 
 .body-text {
@@ -52,7 +50,6 @@ h1 {
   line-height: 1.55;
   opacity: 0.95;
   margin-bottom: 14px;
-  text-align: left;
 }
 
 .small-text {
@@ -70,19 +67,7 @@ h1 {
   text-align: center !important;
 }
 
-/* CONTENT SECTIONS LEFT */
-.section-container,
-.section-container .section-title,
-.section-container .section-sub,
-.section-container .body-text,
-.section-container p,
-.section-container ul,
-.section-container li,
-.section-title,
-.section-sub,
-.body-text {
-  text-align: left !important;
-}
+/* CONTENT SECTIONS LEFT - REMOVED */
 
 /* CTA SECTIONS CENTER */
 .final-cta,
@@ -94,16 +79,9 @@ h1 {
   text-align: center !important;
 }
 
-/* LIST ALIGNMENT */
-ul, li {
-  text-align: left !important;
-}
+/* LIST ALIGNMENT - REMOVED */
 
-/* REMOVE ALIGNMENT FROM CONTAINERS */
-.container,
-.content-wrapper {
-  text-align: left;
-}
+/* REMOVE ALIGNMENT FROM CONTAINERS - REMOVED */
 
 /* SECTION BASE STYLE */
 section {
@@ -249,16 +227,9 @@ section img,
   margin-right: auto;
 }
 
-/* Override center alignment for content sections */
-.section-container .center {
-  text-align: left;
-}
+/* Override center alignment for content sections - REMOVED */
 
-/* Keep center alignment for hero and final CTA */
-.hero-section .center,
-.final-cta .center {
-  text-align: center;
-}
+/* Keep center alignment for hero and final CTA - REMOVED (handled globally) */
 
 /* FOOTER TRUST ROW */
 .trust-row {
@@ -431,4 +402,34 @@ footer {
   .pain-bottom { font-size: 17px; }
   
   .phone-ui { max-width: 320px; }
+}
+
+/* GLOBAL CENTER ALIGNMENT */
+body, section, .section-container, .container, 
+h1, h2, h3, p, ul, li, div, span {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+ul {
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+
+li {
+  display: block;
+  width: 100%;
+  text-align: center !important;
+}
+
+.cta-button, .cta-btn {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: inline-block;
+  text-align: center !important;
+}
+
+.hero-section, .final-cta {
+  text-align: center !important;
 }
