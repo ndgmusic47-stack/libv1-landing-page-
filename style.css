@@ -268,6 +268,20 @@ section img,
   font-size: 18px;
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .cta-btn.large,
+  .cta-btn.big {
+    max-width: 420px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cta-btn.large,
+  .cta-btn.big {
+    max-width: 500px;
+  }
+}
+
 .final-note {
   font-size: 17px;
   opacity: 0.8;
