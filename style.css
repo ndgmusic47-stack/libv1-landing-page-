@@ -33,7 +33,7 @@ h1, h2, h3, p, .text-center {
 /* SECTION BASE STYLE */
 section {
   width: 100%;
-  padding: 80px 20px;
+  padding: 90px 20px;
   overflow-x: hidden;
 }
 
@@ -41,35 +41,41 @@ section {
 .hero-section {
   background: linear-gradient(
     180deg,
-    var(--indigo) 0%,
-    var(--neon-orchid) 35%,
-    var(--electric-sunset) 70%,
-    var(--deep-cosmic) 100%
+    #4B0082 0%,
+    #7A1BCC 25%,
+    #C850FF 55%,
+    #FF6F40 85%,
+    #1A1E4A 100%
   );
 }
 
 .section-light {
   background: linear-gradient(
     180deg,
-    var(--neon-orchid) 0%,
-    var(--electric-sunset) 100%
+    #C850FF 0%,
+    #D767FF 35%,
+    #FF8A55 75%,
+    #FF6F40 100%
   );
 }
 
 .section-mid {
   background: linear-gradient(
     180deg,
-    var(--neon-orchid) 0%,
-    var(--electric-sunset) 70%,
-    var(--deep-cosmic) 100%
+    #FF6F40 0%,
+    #D95CD2 40%,
+    #7A1BCC 75%,
+    #1A1E4A 100%
   );
 }
 
 .section-dark {
   background: linear-gradient(
     180deg,
-    var(--deep-cosmic) 0%,
-    #050614 100%
+    #1A1E4A 0%,
+    #2A2560 40%,
+    #3B1F7F 70%,
+    #4B0082 100%
   );
 }
 
@@ -292,7 +298,7 @@ section img,
 
 /* Mobile adjustments */
 @media (max-width: 480px) {
-  section { padding: 55px 18px; }
+  section { padding: 60px 18px; }
   
   .pain-title { font-size: 28px; }
   .pain-subtitle { font-size: 17px; }
